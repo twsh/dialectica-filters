@@ -72,7 +72,7 @@ If rendering your LaTeX requires some preamble code (command definitions
 or loading packages) these should be included in your
  [document's metadata `header-includes` field](https://pandoc.org/MANUAL.html#extension-yaml_metadata_block).
 Since you're using this filter you're probably targeting formats other
-that LaTeX, so the LaTeX code in `header-includes` should be embedded
+than LaTeX, so the LaTeX code in `header-includes` should be embedded
 between `\`\`\`{=latex}` and `\`\`\`` lines or `~~~{=latex}` and `~~~`
 lines:
 
