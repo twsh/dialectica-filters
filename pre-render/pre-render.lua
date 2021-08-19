@@ -41,6 +41,7 @@ local options = {
   do_something = true, -- false to deactivate the filter
   header = '', -- store for header-includes LaTeX code
   inkscape = false, -- use inkscape instead of pdf2svg
+  dvisvgm = false, -- use dvisvgm instead of pdf2svg
   filetype = 'svg', -- default to SVG
 }
 -- default to `png` if the output format requires it
@@ -129,7 +130,6 @@ local function math2image(source, filepath)
         'math.tex'
       }, '')
       if options.inkscape then
-        -- these formats prefer PNG to SVG
         if options.filetype == 'png' then
             pandoc.pipe('inkscape',
                 {
@@ -151,6 +151,8 @@ local function math2image(source, filepath)
                 },
             '')
          end
+      elseif options.dvisvgm then
+        pandoc.pipe('dvisvgm', {'--pdf', '-o ' .. filepath, 'math.pdf'}, '')
       else
         pandoc.pipe('pdf2svg', {'math.pdf', filepath}, '')
       end
@@ -326,6 +328,10 @@ function get_options(meta)
     -- set the inkscape option
     if opt_map['inkscape'] and opt_map['inkscape'] ~= false then
       options.inkscape = true
+    end
+    -- set the dvisvgm option
+    if opt_map['dvisvgm'] and opt_map['dvisvgm'] ~= false then
+      options.dvisvgm = true
     end
 
   end
