@@ -73,7 +73,7 @@ or loading packages) these should be included in your
  [document's metadata `header-includes` field](https://pandoc.org/MANUAL.html#extension-yaml_metadata_block).
 Since you're using this filter you're probably targeting formats other
 than LaTeX, so the LaTeX code in `header-includes` should be embedded
-between `\`\`\`{=latex}` and `\`\`\`` lines or `~~~{=latex}` and `~~~`
+between `` ```{=latex}`` and `` ``` `` lines or `~~~{=latex}` and `~~~`
 lines:
 
 ```yaml
@@ -186,8 +186,8 @@ pre-render:
 ```
 
 But if you want to make sure that the content is passed to LaTeX as is
-(e.g. if it includes LaTeX comments), it's safer to place it
-  `\`\`\`{=latex}` and `\`\`\`` lines or `~~~{=latex}` and `~~~`:
+(e.g. if it includes LaTeX comments), it's safer to place it between
+  `` ```{=latex}`` and `` ``` `` lines or `~~~{=latex}` and `~~~`:
 
 ```yaml
 pre-render:
