@@ -18,7 +18,6 @@ with class "pre-render" will be pre-rendered as svg or png images.
 -- # Options
 -- in pandoc's documentation <https://pandoc.org/lua-filters.html#examples>
 -- @TODO add metadata option to specify raw LaTeX file
--- @TODO convert the caption in proper pandoc code (split by spaces)
 -- @TODO get errors from lualatex and pdf2svg, but silent otherwise. 
 -- @TODO don't get messages from inkscape unless --verbose is on
 -- @TODO use pdf and ghostscript if available (seems safer for fonts)
