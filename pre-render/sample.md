@@ -13,7 +13,7 @@ header-includes:
   ```
 ---
 
-In this paragraph the equations should not pre-rendered. $$p \rightarrow q 
+In this paragraph the equations should not be pre-rendered. $$p \rightarrow q 
 \models \mathcal{Fa}$$ $$f(x) = \int_{-\infty}^\infty \hat{f}(\xi)\,e^{2 \pi i \xi x}\,d\xi$$
 
 ::: pre-render
@@ -22,6 +22,6 @@ In this paragraph the equations are pre-rendered: $$p \rightarrow q
 in display mode.
 :::
 
-Now let's try with inline equations. A couple of inline equation that should not to be pre-rendered: $F = ma$, $E = mc^2$. [The same, now pre-rendered: $F = ma$ and the second $E = mc^2$.]{.pre-render}
+Now let's try with inline equations. A couple of inline equation that should not be pre-rendered: $F = ma$, $E = mc^2$. [The same, now pre-rendered: $F = ma$ and the second $E = mc^2$.]{.pre-render}
 
 
